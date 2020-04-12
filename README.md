@@ -1,6 +1,8 @@
 # book-app
 ## PRs
 https://github.com/Darah98/book-app/pull/1
+https://github.com/Darah98/book-app/pull/2
+
 
 
 **Author**: Darah
