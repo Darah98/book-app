@@ -8,20 +8,21 @@
 <body>
     <header></header>
     <main>
-        <form action="">
-            <input type="text">
+        <form action="/result">
+            <input type="text" class="srchbox">
             <label>
                 <span>Title</span>
-                <input type="checkbox" name="Title" class="tick">
+                <input type="checkbox" name="Title" id="title">
             </label>
             <label>
                 <span>Author</span>
-                <input type="checkbox" name="Author" class="tick">
+                <input type="checkbox" name="Author" id="author">
             </label>
-            <input type="button" value="Search">
+            <button class="btn">Search</button>
         </form>
     </main>
     <footer></footer>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="../app.js"></script>
 </body>
 </html>

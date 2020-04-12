@@ -2,14 +2,14 @@
 ## PRs
 https://github.com/Darah98/book-app/pull/1
 https://github.com/Darah98/book-app/pull/2
-
+https://github.com/Darah98/book-app/pull/3
 
 
 **Author**: Darah
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.0.0
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code 301 class. (i.e. What's your problem domain?) -->
+This application will help search for books from the google books API and return results based on author searches or title searches.
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->

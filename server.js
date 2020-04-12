@@ -40,7 +40,7 @@ app.get('/searches/new', (req, res)=> {
 //         res.redirect('pages/searches/show', {book: bookArr});
 //     })
 // })
-app.get('/title', (req, res)=>{
+app.get('/result', (req, res)=>{
     let search= req.query.title;
     const url= `https://www.googleapis.com/books/v1/volumes?q=${search}`
     superagent.get(url)
@@ -48,6 +48,16 @@ app.get('/title', (req, res)=>{
         res.render('pages/searches/show', {book: data.body.items});
     })
 })
+
+// app.get('/author', (req, res)=>{
+//     let search= req.query.author;
+//     const url= `https://www.googleapis.com/books/v1/volumes?q=${search}`
+//     superagent.get(url)
+//     .then(data=>{
+//         res.render('pages/searches/show', {book: data.body.items});
+//     })
+// })
+
 function Book(imgUrl, title, author, description){
     this.imgUrl= imgUrl;
     this.title= title;
