@@ -6,7 +6,7 @@
     <title>Book Details</title>
   </head>
   <body>
-    <%- include ('../header') %>
+    <%- include ('../header.ejs') %>
     <main>
       <section>
         <img src="<%= details.img %>" alt="book-cover" />
@@ -16,6 +16,7 @@
         <p><strong>Category:</strong> <%= details.bookshelf %></p>
         <p><strong>ISBN:</strong> <%= details.isbn %></p>
       </section>
+      <%- include ('edit.ejs') %>
     </main>
   </body>
 </html>

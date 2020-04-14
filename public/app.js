@@ -1,4 +1,16 @@
-// 'use strict';
+'use strict';
+
+$(document).ready(()=>{
+    $('.info').hide();
+    $('.form-showing').on('click', function(){
+        // alert('thanks for clicking. bye');
+        $('.info').toggle();
+    })
+    
+})
+
+
+
 
 // $('.btn').on('click', event=>{
 //     event.preventDefault();
@@ -14,4 +26,3 @@
 //         // location.assign('searches/show')
 //     }
 // })
-// // module.exports
