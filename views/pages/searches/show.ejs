@@ -11,12 +11,12 @@
       <section>
         <% book.forEach(val=>{ %>
         <ul>
-          <li><img src="<%= val.imgUrl %>" /></li>
+          <li><img src="<%= val.imgUrl.thumbnail %>" /></li>
           <li><%= val.title %></li>
           <li><%= val.author %></li>
         </ul>
         <form action="/add" method="post">
-          <input type="hidden" name="img" value="<%=val.imgUrl%>" >
+          <input type="hidden" name="img" value="<%=val.imgUrl.thumbnail%>" >
           <input type="hidden" name="title" value="<%=val.title%>" >
           <input type="hidden" name="author" value="<%=val.author%>" >
           <input type="hidden" name="description" value="<%=val.description%>" >

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>edit</title>
+  </head>
+  <body>
+    <section>
+      <button class="form-showing">Edit Saved Book Info</button>
+      <form
+        action="/update/<%= details.id%>?_method=put"
+        method="POST"
+        class="info"
+      >
+        <input type="text" name="title" value="<%=details.title%>" />
+        <input type="text" name="author" value="<%=details.author%>" />
+        <input
+          type="text"
+          name="description"
+          value="<%=details.description%>"
+        />
+        <input type="text" name="isbn" value="<%=details.isbn%>" />
+        <!-- <input type="text" name="bookshelf" value="<%=details.bookshelf%>" /> -->
+
+        <select name="bookshelf" id="">
+          <% details2.forEach(val=>{ %>
+            <option class="option" value="<%= val.bookshelf%>"><%= val.bookshelf%></option>
+            <!-- <% if() %> -->
+          <% }) %>
+        </select>
+        <button>Update</button>
+      </form>
+        <form action="/delete/<%=details.id%>?_method=put" method="POST">
+          <button>Delete</button>
+        </form>
+      </input>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="../app.js"></script>
+  </body>
+</html>

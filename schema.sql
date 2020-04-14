@@ -11,3 +11,7 @@ CREATE TABLE books(
 );
 
 INSERT INTO books (img, title, author, description, isbn, bookshelf) VALUES ('../bookcover.jpg', 'some book', 'some author', 'some description', '516512', 'some category');
+
+-- CREATE TABLE categories(
+--     category VARCHAR(255)
+-- );
