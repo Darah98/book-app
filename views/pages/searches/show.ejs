@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Results</title>
-</head>
-<body>
+  </head>
+  <body>
+    <%- include ('../header.ejs') %>
+    <main>
+      <section>
         <% book.forEach(val=>{ %>
-            <ul>
-               <li> <img src="<%= val.volumeInfo.imageLinks.thumbnail %>"> </li>
-               <li> <%= val.volumeInfo.title %> </li>
-               <li> <%= val.volumeInfo.authors %> </li>
-               <li> <%= val.volumeInfo.description %> </li>
-            </ul>
+        <ul>
+          <li><img src="<%= val.imgUrl %>" /></li>
+          <li><%= val.title %></li>
+          <li><%= val.author %></li>
+        </ul>
+        <form action="/add" method="post">
+          <input type="hidden" name="img" value="<%=val.imgUrl%>" >
+          <input type="hidden" name="title" value="<%=val.title%>" >
+          <input type="hidden" name="author" value="<%=val.author%>" >
+          <input type="hidden" name="description" value="<%=val.description%>" >
+          <input type="hidden" name="bookshelf" value="<%=val.bookshelf%>" >
+          <input type="hidden" name="isbn" value="<%=val.isbn%>" >
+
+          <button class="save">Save Book</button>
+        </form>
         <% }); %>
-</body>
+      </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  </body>
 </html>

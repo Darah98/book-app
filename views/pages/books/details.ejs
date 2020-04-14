@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Details</title>
+  </head>
+  <body>
+    <%- include ('../header') %>
+    <main>
+      <section>
+        <img src="<%= details.img %>" alt="book-cover" />
+        <h3><strong>Book Title:</strong> <%= details.title %></h3>
+        <h4><strong>Author Name(s):</strong> <%= details.author %></h4>
+        <p><strong>Book Description: </strong><%= details.description %></p>
+        <p><strong>Category:</strong> <%= details.bookshelf %></p>
+        <p><strong>ISBN:</strong> <%= details.isbn %></p>
+      </section>
+    </main>
+  </body>
+</html>

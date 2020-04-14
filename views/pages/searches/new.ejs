@@ -8,15 +8,15 @@
 <body>
     <header></header>
     <main>
-        <form action="/result">
-            <input type="text" class="srchbox">
+        <form action="/result" method="POST">
+            <input type="text" name="keyword" class="srchbox">
             <label>
                 <span>Title</span>
-                <input type="checkbox" name="Title" id="title">
+                <input type="checkbox" name="optiontitle" id="title">
             </label>
             <label>
                 <span>Author</span>
-                <input type="checkbox" name="Author" id="author">
+                <input type="checkbox" name="optionauthor" id="author">
             </label>
             <button class="btn">Search</button>
         </form>
