@@ -8,10 +8,21 @@
 </head>
 <body>
     <header>
-        <h1>Welcome Home!</h1>
-    </header>
+        <h1>Welcome!</h1>
+       <p>Make a new search <a href="/search">here</a>!</p>
+    </header>    
     <main>
-       <p>Make a new search <a href="/searches/new">here</a>!</p>
+        <ul>
+            <p><strong>Total Saved Books:</strong> <%= booklist.length %></p>
+            <% booklist.forEach(book=>{ %>
+                <li>
+                    <img src="<%= book.img %>" alt="">
+                    <h3> Book Title: <%= book.title %> </h3>
+                    <h4>Author Name: <%= book.author %></h4>
+                    <a href="/books/<%= book.id%>">View Details</a>
+                </li>
+            <% }) %>
+        </ul>   
     </main>
     <footer> All Rights Reserved. 2020</footer>
 </body>
