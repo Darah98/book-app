@@ -1,6 +1,35 @@
 body{
-    background-color: blueviolet;
+    width: 100%;
+    background-color: #ab70ed;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Oswald', sans-serif;
  }
-/* .tick{
-    width: 300px;
-} */
+ header {
+    background: #f0f8ff47;
+    text-align: center;
+    line-height: 40px;
+}
+footer {
+    background-color: #f0f8ff47;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.listofitems{
+    display: inline-flex;
+    flex-direction: column;
+
+}
+.totalbooks {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 150px;
+    background-color: #f0f8ff47;
+    padding: 15px;
+    border-radius: 30px;
+}

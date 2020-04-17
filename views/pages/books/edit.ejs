@@ -21,12 +21,10 @@
           value="<%=details.description%>"
         />
         <input type="text" name="isbn" value="<%=details.isbn%>" />
-        <!-- <input type="text" name="bookshelf" value="<%=details.bookshelf%>" /> -->
 
         <select name="bookshelf" id="">
           <% details2.forEach(val=>{ %>
             <option class="option" value="<%= val.bookshelf%>"><%= val.bookshelf%></option>
-            <!-- <% if() %> -->
           <% }) %>
         </select>
         <button>Update</button>
