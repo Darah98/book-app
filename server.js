@@ -33,8 +33,6 @@ app.post('/add', saveBook);
 app.get('/books/:id', (req, res) => {
   let SQL = 'SELECT * FROM books WHERE id=$1;';
   let safeValues = [req.params.id];
-  // bookCategory();
-
   return client.query(SQL, safeValues).then((results) => {
     let SQL2 = 'SELECT DISTINCT bookshelf FROM books;';
     return client.query(SQL2).then((results2) => {
@@ -63,15 +61,11 @@ app.post('/result', (req, res) => {
 });
 
 function saveBook(req, res) {
-  // console.log(req.body);
-  // let bookshelf_cat= req.body.bookshelf;
-  // console.log(bookshelf_cat);
   let { img, title, author, description, isbn, bookshelf } = req.body;
   let bookID = req.params.id;
   let SQL =
     'INSERT INTO books (img, title, author, description, isbn, bookshelf) VALUES ($1, $2, $3, $4, $5, $6);';
   let safeValues = [img, title, author, description, isbn, bookshelf];
-  // bookCategory();
   console.log(safeValues);
 
   return client.query(SQL, safeValues).then(() => {
@@ -79,22 +73,7 @@ function saveBook(req, res) {
   }).catch(error=>{
     console.log(error);
   })
-
 }
-function bookCategory() {
-  // let cat= req.body.bookshelf;
-  // let SQL= 'INSERT INTO categories VALUES $1;';
-  // let val= [cat];
-  let SQL = 'SELECT bookshelf FROM books;';
-}
-// app.get('/books/:id', (req, res)=>{
-//     let SQL= 'SELECT DISTINCT bookshelf FROM books;';
-//     return   client.query(SQL)
-//     .then(results=>{
-//         res.render('pages/books/details', {categories: results.rows[0]});
-//     })
-// })
-``
 app.put('/update/:id', (req, res) => {
   let { title, author, description, isbn, bookshelf } = req.body;
   let id = req.params.id;
@@ -105,12 +84,10 @@ app.put('/update/:id', (req, res) => {
     res.redirect('/');
   });
 });
-// console.log('value');
 
 app.put('/delete/:id', (req, res)=>{
   let SQL= 'DELETE FROM books WHERE id=$1;';
   let value= [req.params.id];
-  // console.log('value');
   return client.query(SQL, value)
   .then(res.redirect('/'))
 })
