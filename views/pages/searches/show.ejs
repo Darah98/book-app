@@ -4,17 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Results</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/show.css">
   </head>
   <body>
     <%- include ('../header.ejs') %>
     <main>
       <section>
         <% book.forEach(val=>{ %>
-        <ul>
-          <li><img src="<%= val.imgUrl.thumbnail %>" /></li>
-          <li><%= val.title %></li>
-          <li><%= val.author %></li>
-        </ul>
+        <ul class="booklist">
+          <li><img class="homeimg" src="<%= val.imgUrl.thumbnail %>" /></li>
+          <li>Title: <%= val.title %></li>
+          <li>Author: <%= val.author %></li>
+        
         <form action="/add" method="post">
           <input type="hidden" name="img" value="<%=val.imgUrl.thumbnail%>" >
           <input type="hidden" name="title" value="<%=val.title%>" >
@@ -25,6 +27,7 @@
 
           <button class="save">Save Book</button>
         </form>
+      </ul>
         <% }); %>
       </section>
     </main>
