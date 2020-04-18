@@ -9,19 +9,16 @@
     <link rel="stylesheet" href="./styles/base.css">
 </head>
 <body>
-    <header>
-        <h1>BOOK APP</h1>
-       <p>Welcome to our book application. Make a new <a href="/search">search</a></p>
-    </header>    
+    <%- include('./header.ejs') %>  
     <main>
         <ul class="listofitems">
             <p class="totalbooks"><strong>Total Saved Books:</strong> <%= booklist.length %></p>
             <% booklist.forEach(book=>{ %>
-                <li>
-                    <img src="<%= book.img %>" alt="">
+                <li class="booklist">
+                    <img class="homeimg" src="<%= book.img %>" alt="">
                     <h3> Book Title: <%= book.title %> </h3>
                     <h4>Author Name: <%= book.author %></h4>
-                    <a href="/books/<%= book.id%>">View Details</a>
+                    <a class="detailsbtn" href="/books/<%= book.id%>">View Details</a>
                 </li>
             <% }) %>
         </ul>   

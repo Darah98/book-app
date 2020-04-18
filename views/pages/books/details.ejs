@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Details</title>
     <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/show.css">
   </head>
   <body>
     <%- include ('../header.ejs') %>
     <main>
-      <section>
-        <img src="<%= details.img %>" alt="book-cover" />
+      <section class="booklist">
+        <img class="homeimg" src="<%= details.img %>" alt="book-cover" />
         <h3><strong>Book Title:</strong> <%= details.title %></h3>
         <h4><strong>Author Name(s):</strong> <%= details.author %></h4>
         <p><strong>Book Description: </strong><%= details.description %></p>
         <p><strong>Category:</strong> <%= details.bookshelf %></p>
         <p><strong>ISBN:</strong> <%= details.isbn %></p>
+        <%- include ('edit.ejs') %>
       </section>
-      <%- include ('edit.ejs') %>
     </main>
   </body>
 </html>

@@ -1,0 +1,20 @@
+form{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 70px;
+    margin-top: 20px;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 2em;
+}
+button{
+    background: blueviolet;
+    border: solid 2px #481775;
+}
+input.srchbox {
+    background: #f0f8ff4f;
+}

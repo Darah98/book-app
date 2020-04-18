@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Search</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/new.css">
 </head>
 <body>
-    <header></header>
+<%- include ('../header.ejs') %>
     <main>
+        <p>Make a new search:</p>
         <form action="/result" method="POST">
-            <input type="text" name="keyword" class="srchbox">
+            <input required type="text" name="keyword" class="srchbox">
             <label>
                 <span>Title</span>
-                <input type="checkbox" name="optiontitle" id="title">
+                <input type="radio" name="optiontitle" id="title">
             </label>
             <label>
                 <span>Author</span>
-                <input type="checkbox" name="optionauthor" id="author">
+                <input type="radio" name="optionauthor" id="author">
             </label>
             <button class="btn">Search</button>
         </form>
     </main>
-    <footer></footer>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="../app.js"></script>
 </body>

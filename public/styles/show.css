@@ -1,0 +1,15 @@
+.save{
+    background: #8a2be280;
+    padding: 5px;
+    border: blueviolet 1px solid;
+    border-radius: 12px;
+}
+.form-showing{
+    background: #8a2be280;
+    padding: 5px;
+    border: blueviolet 1px solid;
+    border-radius: 12px;
+}
+input{
+    background-color: #f0f8ff47;
+}
